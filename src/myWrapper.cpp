@@ -7,8 +7,10 @@
 using namespace Rcpp;
 
 // [[Rcpp::export]]
-NumericVector myCppF(NumericVector &Rx) {
+NumericVector myCppF(NumericVector Rx) {
   std::vector<double> x_h = Rcpp::as<std::vector<double> >(Rx);
+  x_h[0] = 1.111
+  std::cout << "Indirectly modify Rx?" << Rx[0] << "\n";
   thrust::device_vector<double> x_d(x_h.begin(), x_h.end());
   myOp(x_d);
   thrust::copy(x_d.begin(), x_d.end(), x_h.begin());
