@@ -2,10 +2,11 @@ Package: RcppThrust
 Type: Package
 Title: Learning to Combine Device Code and Rcpp with Thrust
 Version: 0.1.0
+Date: 2017-04-17
 Author: Eric
 Maintainer: Eric <emittman@iastate.edu>
 Description: Inclusive scan, etc.
-License: GPL
-Encoding: UTF-8
+License: GPL (>= 2)
 Imports: Rcpp (>= 0.12.10)
 LinkingTo: Rcpp
+
