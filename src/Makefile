@@ -12,7 +12,7 @@ TARGET = RcppThrust.so
 
 #final SHLIB
 $(TARGET): myWrapper.cpp mySource.o
-	nvcc -shared $(NVCC_FLAGS) -o $(TARGET) -I$(R_INC) -I. $(DEBUG_FLAGS)
+	nvcc -shared $(NVCC_FLAGS) mySource.o -o $(TARGET) -I$(R_INC) -I. $(DEBUG_FLAGS)
 
 #wrappers
 mySource.o: mySource.cu
