@@ -13,7 +13,8 @@ NumericVector myCppF(NumericVector Rx) {
   myOp(x_d);
   thrust::copy(x_d.begin(), x_d.end(), x_h.begin());
   for(int i=0; i<x_h.size(); i++)
-    std::cout << "\t" << x_h[i];
+    std::cout << "" << x_h[i];
   std::cout <<"\n";
-  return Rx;
+  NumericVector Rout = wrap(x_h);
+  return Rout;
 }
