@@ -1,2 +1,2 @@
-#' @useDynLib RccpThrust
+#' @useDynLib RcppThrust
 NULL
